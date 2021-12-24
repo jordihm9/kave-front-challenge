@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { theme } from '@theme';
+import { COLORS } from '@theme';
 
 const StyledForm = styled.form`
   grid-column: 1 / 3;
@@ -10,7 +10,7 @@ const InputContainer = styled.div`
   padding: 0.5em 1em;
   display: flex;
   border-radius: 0.5rem;
-  background: ${theme.colors.softGrey};
+  background: ${COLORS.SoftGrey};
 `;
 
 const Input = styled.input`
