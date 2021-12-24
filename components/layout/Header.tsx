@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-import { theme } from '@theme';
+import { COLORS } from '@theme';
 
+import { H1 } from '@headings';
 import { Heart } from '@icons/Heart';
 import { SearchBar } from 'components/SearchBar';
 
@@ -13,7 +14,7 @@ const Nav = styled.nav`
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
   row-gap: 1rem;
-  box-shadow: 0 0 2px ${theme.colors.softGrey};
+  box-shadow: 0 0 2px ${COLORS.SoftGrey};
 `;
 
 const LogoContainer = styled.div`
@@ -22,7 +23,6 @@ const LogoContainer = styled.div`
   align-items: center;
   
   & > h1 {
-    color: ${theme.colors.primary};
     padding-left: 0.5em;
   }
 `;
@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
     <Nav>
       <LogoContainer>
         <img src="/kave-home-logo.svg" alt="Kave Home Logo Icon" />
-        <h1>Kave Home</h1>
+        <H1 primary>Kave Home</H1>
       </LogoContainer>
       <HeartContainer>
         <Heart />

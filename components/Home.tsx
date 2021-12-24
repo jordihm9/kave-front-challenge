@@ -1,7 +1,9 @@
+import { Landing } from 'components/Landing';
+
 export const Home: React.FC = () => {
   return (
     <main>
-      Hello Kave Home!
+      <Landing/>
     </main>
   );
 }
