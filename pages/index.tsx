@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 
+import { Header } from '@layout/Header';
+
 const Home: NextPage = () => {
   return (
     <>
-      <main>
-        <h1>Hello Kave Home!</h1>
-      </main>
+      <Header/>
     </>
   );
 }
