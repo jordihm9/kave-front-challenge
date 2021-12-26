@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
     <Nav>
       <LogoContainer>
         <img src="/kave-home-logo.svg" alt="Kave Home Logo Icon" />
-        <H1 primary>Kave Home</H1>
+        <H1 color={COLORS.Primary}>Kave Home</H1>
       </LogoContainer>
       <HeartContainer>
         <Heart />
