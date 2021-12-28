@@ -21,7 +21,7 @@ export const Home: React.FC<Props> = ({products}) => {
         <H2>Inspírate</H2>
         <ButtonCategoriesNav/>
         <CategoriesNav/>
-        { products.length && <ProductsList products={products.splice(0,9)} />}
+        <ProductsList products={products.splice(0,9)} />
         <Container>
           <Link href='/products'>
             <Button>VER TODOS LOS PRODUCTOS</Button>
