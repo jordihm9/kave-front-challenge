@@ -27,3 +27,9 @@ export const H2 = styled.h2<Props>`
   font-family: 'Noto Serif', serif;
 `;
 
+export const H3 = styled.h3<Props>`
+  color: ${setColor};
+  text-align: ${setCenterText};
+  font-family: 'Noto Serif', serif;
+`;
+
