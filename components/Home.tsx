@@ -1,5 +1,5 @@
 
-import { Categories, ButtonCategories } from 'components/Categories';
+import { CategoriesNav, ButtonCategoriesNav } from 'components/CategoriesNav';
 import { Container } from '@layout/Container';
 import { H2 } from '@headings';
 import { Landing } from 'components/Landing';
@@ -17,8 +17,8 @@ export const Home: React.FC<Props> = ({products}) => {
       <Landing/>
       <Container>
         <H2>Inspírate</H2>
-        <ButtonCategories/>
-        <Categories/>
+        <ButtonCategoriesNav/>
+        <CategoriesNav/>
         { products.length && <ProductsList products={products.splice(0,9)} />}
       </Container>
     </main>

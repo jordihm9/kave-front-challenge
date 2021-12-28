@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Category, CategoryButton } from 'components/Category';
+
 import { SnapScrollX } from '@layout/SnapScroll';
 
 export type CategoryType = {
@@ -42,7 +43,7 @@ const Wrapper = styled.section`
   justify-content: space-around;
 `;
 
-export const ButtonCategories: React.FC = () => {
+export const ButtonCategoriesNav: React.FC = () => {
   return (
     <Wrapper>
       {categories.map((category) => (
@@ -52,7 +53,7 @@ export const ButtonCategories: React.FC = () => {
   );
 }
 
-export const Categories: React.FC = () => {
+export const CategoriesNav: React.FC = () => {
   return (
     <SnapScrollX>
       {categories.map((category) => (

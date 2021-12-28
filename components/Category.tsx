@@ -4,7 +4,7 @@ import { COLORS } from '@theme';
 
 import { Button } from 'components/Button';
 
-import { CategoryType } from 'components/Categories';
+import { CategoryType } from 'components/CategoriesNav';
 
 interface Props {
   category: CategoryType
@@ -13,6 +13,7 @@ interface Props {
 const CategoryContainer = styled.div`
   margin: 2rem 1.5rem;
   scroll-snap-align: center;
+  cursor: pointer;
 `;
 
 const CategoryImg = styled.div<{src: string}>`
