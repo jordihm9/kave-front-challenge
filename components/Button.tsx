@@ -46,7 +46,7 @@ const setColor = ({style}: Props): COLORS => {
 
 export const Button = styled.button<Props>`
   margin: 1em 0.5em;
-  padding: 0.5em 1.75em;
+  padding: 1.15em 1.75em;
   outline: none;
   border: 0.0625em solid ${setBorderColor};
   letter-spacing: 0.025em;
