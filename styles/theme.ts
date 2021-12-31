@@ -6,3 +6,10 @@ export enum COLORS {
   Primary = '#FF3D3A'
 }
 
+export enum BREAKPOINTS {
+  XL = '1440px',
+  LG = '960px',
+  MD = '720px',
+  SM = '540px'
+}
+
