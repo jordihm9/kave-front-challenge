@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import { Product } from 'components/Product';
 
+import { mediaQuery } from 'styles/utils';
+
 import { ProductType } from 'services/fetchProducts';
 
 interface Props {
@@ -9,12 +11,13 @@ interface Props {
 }
 
 const Grid = styled.div`
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem 1rem;
+  margin: 3rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem 1rem;
+
+  ${mediaQuery('MD')`grid-template-columns: repeat(2, 1fr);`}
+  ${mediaQuery('XL')`grid-template-columns: repeat(3, 1fr);`}
 `;
 
 export const ProductsList: React.FC<Props> = ({products}) => {

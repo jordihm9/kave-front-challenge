@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 import { COLORS } from '@theme';
+import { mediaQuery } from 'styles/utils';
 
 import { H1 } from '@headings';
 
 const Container = styled.div`
-  padding: 1.5em 1em;
-  height: 80vh;
+  min-height: 85vh;
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -28,8 +28,25 @@ const Container = styled.div`
   }
 
   & > h1 {
+    padding: 0 1em 1em 0.5em;
     font-family: 'Poppins', sans-serif;
-  }
+
+    ${mediaQuery('MD')`
+      font-size: 2.5rem;
+      padding-bottom: 1.5em;
+      padding-left: 1.5em;
+    `}
+ 
+    ${mediaQuery('LG')`
+      font-size: 3rem;
+      padding-bottom: 2em;
+      padding-left: 2em;
+    `}
+
+    ${mediaQuery('XL')`
+      font-size: 3.5rem;
+    `}
+ }
 `;
 
 export const Landing: React.FC = () => {

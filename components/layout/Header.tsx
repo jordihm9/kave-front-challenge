@@ -2,13 +2,14 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { COLORS } from '@theme';
+import { mediaQuery } from 'styles/utils';
 
 import { H1 } from '@headings';
 import { Heart } from '@icons/Heart';
 import { SearchBar } from 'components/SearchBar';
 
 const Nav = styled.nav`
-  padding: 0.5em 1em;
+  padding: 1em;
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -16,6 +17,11 @@ const Nav = styled.nav`
   align-items: center;
   row-gap: 1rem;
   box-shadow: 0 0 2px ${COLORS.SoftGrey};
+
+  ${mediaQuery('LG')`
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: none; 
+  `}
 `;
 
 const LogoContainer = styled.div`

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { COLORS } from '@theme';
+import { mediaQuery } from 'styles/utils';
 
 import { Heart } from '@icons/Heart';
 
@@ -14,6 +15,10 @@ const Thumbnail = styled.div`
   height: 16.6875rem;
   position: relative;
   background-color: ${COLORS.SoftGrey};
+
+  ${mediaQuery('XL')`
+    width: 24.0625rem;
+  `}
 
   & > svg {
     position: absolute;

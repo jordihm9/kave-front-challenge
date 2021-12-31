@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
 import { COLORS } from '@theme';
+import { mediaQuery } from 'styles/utils';
 
 const StyledForm = styled.form`
   grid-column: 1 / 3;
+
+  ${mediaQuery('LG')`
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  `}
 `;
 
 const InputContainer = styled.div`
