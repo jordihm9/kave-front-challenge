@@ -34,7 +34,7 @@ export const ProductThumbnail: React.FC<Props> = ({src, alt}) => {
   return (
     <Thumbnail>
       <Heart/>
-      <Img src={src} alt={alt} />
+      <Img src={src} alt={alt} loading='lazy'/>
     </Thumbnail>
   );
 }
