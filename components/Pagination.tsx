@@ -51,8 +51,16 @@ export const Pagination: React.FC<Props> = ({current, onChange, totalPages, offs
     return Array.from({ length }, (_, idx) => idx + start);
   }
 
-  const decrement = () => onChange(current -1);
-  const increment = () => onChange(current +1);
+  const decrement = () => {
+    if (current === 1) return;
+    onChange(current -1);
+  }
+
+  const increment = () => {
+    if (current === totalPages) return;
+    onChange(current +1);
+  }
+
   const setPage = (p: number) => onChange(p);
 
   return (
