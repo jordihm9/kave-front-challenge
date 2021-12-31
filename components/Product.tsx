@@ -24,7 +24,7 @@ export const Product: React.FC<Props> = ({product}) => {
   return (
     <Container>
       <ProductThumbnail src={product.imageUrl} alt={product.collection}/>
-      <Title>{product.collection}</Title>
+      <Title bold>{product.collection}</Title>
       <Price size='S' price={product.price} />
     </Container>
   );

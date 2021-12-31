@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { COLORS } from '@theme';
@@ -21,8 +22,10 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
   
   & > h1 {
+    font-family: 'Poppins', sans-serif;
     padding-left: 0.5em;
   }
 `;
@@ -36,10 +39,12 @@ const HeartContainer = styled.div`
 export const Header: React.FC = () => {
   return (
     <Nav>
-      <LogoContainer>
-        <img src="/kave-home-logo.svg" alt="Kave Home Logo Icon" />
-        <H1 color={COLORS.Primary}>Kave Home</H1>
-      </LogoContainer>
+      <Link href='/'>
+        <LogoContainer>
+          <img src="/kave-home-logo.svg" alt="Kave Home Logo Icon" />
+          <H1 color={COLORS.Primary}>Kave Home</H1>
+        </LogoContainer>
+      </Link>
       <HeartContainer>
         <Heart />
       </HeartContainer>

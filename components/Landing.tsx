@@ -26,6 +26,10 @@ const Container = styled.div`
     background-color: rgba(0,0,0,0.5);
     z-index: -1;
   }
+
+  & > h1 {
+    font-family: 'Poppins', sans-serif;
+  }
 `;
 
 export const Landing: React.FC = () => {
