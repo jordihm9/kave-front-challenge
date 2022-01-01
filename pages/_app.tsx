@@ -15,7 +15,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
-      </Head>
+        <link rel="apple-touch-icon" sizes="76x76" href="https://static.kavehome.com/static/nilo/img/icons/apple-icon-76x76.png"/>
+        <link rel="icon" type="image/png" sizes="96x96" href="https://static.kavehome.com/static/nilo/img/icons/favicon-96x96.png"/>
+        </Head>
       <Header/>
       <Component {...pageProps} />
     </>

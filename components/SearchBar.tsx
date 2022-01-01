@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import { COLORS } from '@theme';
 import { mediaQuery } from 'styles/utils';
 
+import Image from 'next/image';
+
+import magnifierIcon from 'public/magnifier.svg';
+
 const StyledForm = styled.form`
   grid-column: 1 / 3;
 
@@ -30,7 +34,10 @@ export const SearchBar: React.FC = () => {
   return (
     <StyledForm>
       <InputContainer>
-        <img src='magnifier.svg' alt='magnifier icon' />
+        <Image
+          src={magnifierIcon}
+          alt='magnifier icon'
+        />
         <Input type='text' placeholder='Buscar productos' />
       </InputContainer>
     </StyledForm>

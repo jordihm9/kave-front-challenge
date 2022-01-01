@@ -44,7 +44,7 @@ export const Pagination: React.FC<Props> = ({current, onChange, totalPages, offs
     }
 
     setPagesRange(range(start, end));
-  }, [current]);
+  }, [current]); // eslint-disable-line
 
   const range = (start: number, end: number) => {
     let length = end - start + 1;

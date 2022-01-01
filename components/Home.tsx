@@ -23,8 +23,10 @@ export const Home: React.FC<Props> = ({products}) => {
         <CategoriesNav/>
         <ProductsList products={products.splice(0,9)} />
         <Container>
-          <Link href='/products'>
-            <Button>VER TODOS LOS PRODUCTOS</Button>
+          <Link href='/products' passHref>
+            <a>
+              <Button>VER TODOS LOS PRODUCTOS</Button>
+            </a>
           </Link>
         </Container>
       </Container>

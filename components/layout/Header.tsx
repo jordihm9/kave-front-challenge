@@ -1,12 +1,16 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import Image from 'next/image';
+
 import { COLORS } from '@theme';
 import { mediaQuery } from 'styles/utils';
 
 import { H1 } from '@headings';
 import { Heart } from '@icons/Heart';
 import { SearchBar } from 'components/SearchBar';
+
+import kavehomeLogo from 'public/kave-home-logo.svg';
 
 const Nav = styled.nav`
   padding: 1em;
@@ -24,7 +28,7 @@ const Nav = styled.nav`
   `}
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,9 +49,9 @@ const HeartContainer = styled.div`
 export const Header: React.FC = () => {
   return (
     <Nav>
-      <Link href='/'>
+      <Link href='/' passHref>
         <LogoContainer>
-          <img src="/kave-home-logo.svg" alt="Kave Home Logo Icon" />
+          <Image src={kavehomeLogo} alt="Kave Home Logo Icon" />
           <H1 color={COLORS.Primary}>Kave Home</H1>
         </LogoContainer>
       </Link>
