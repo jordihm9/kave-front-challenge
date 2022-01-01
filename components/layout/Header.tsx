@@ -48,18 +48,20 @@ const HeartContainer = styled.div`
 
 export const Header: React.FC = () => {
   return (
-    <Nav>
-      <Link href='/' passHref>
-        <LogoContainer>
-          <Image src={kavehomeLogo} alt="Kave Home Logo Icon" />
-          <H1 color={COLORS.Primary}>Kave Home</H1>
-        </LogoContainer>
-      </Link>
-      <HeartContainer>
-        <Heart />
-      </HeartContainer>
-      <SearchBar />
-    </Nav>
+    <header>
+      <Nav>
+        <Link href='/' passHref>
+          <LogoContainer>
+            <Image src={kavehomeLogo} alt="Kave Home Logo Icon" />
+            <H1 color={COLORS.Primary}>Kave Home</H1>
+          </LogoContainer>
+        </Link>
+        <HeartContainer>
+          <Heart />
+        </HeartContainer>
+        <SearchBar />
+      </Nav>
+    </header>
   );
 }
 
