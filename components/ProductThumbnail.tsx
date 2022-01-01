@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Image from 'next/image';
+
 import { COLORS } from '@theme';
 import { mediaQuery } from 'styles/utils';
 
@@ -27,7 +29,7 @@ const Thumbnail = styled.div`
   }
 `;
 
-const Img = styled.img`
+const Img = styled(Image)`
   margin: auto;
   display: block;
   height: 100%;
@@ -39,7 +41,12 @@ export const ProductThumbnail: React.FC<Props> = ({src, alt}) => {
   return (
     <Thumbnail>
       <Heart/>
-      <Img src={src} alt={alt} loading='lazy'/>
+      <Img
+        src={src}
+        alt={alt}
+        loading='lazy'
+        layout='fill'
+      />
     </Thumbnail>
   );
 }
