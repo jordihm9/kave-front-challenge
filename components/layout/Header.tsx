@@ -28,7 +28,7 @@ const Nav = styled.nav`
   `}
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,7 +49,7 @@ const HeartContainer = styled.div`
 export const Header: React.FC = () => {
   return (
     <Nav>
-      <Link href='/'>
+      <Link href='/' passHref>
         <LogoContainer>
           <Image src={kavehomeLogo} alt="Kave Home Logo Icon" />
           <H1 color={COLORS.Primary}>Kave Home</H1>
