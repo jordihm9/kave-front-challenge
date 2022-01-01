@@ -26,8 +26,8 @@ const Products: NextPage = () => {
     fetchProducts().then(setProducts);
   }, []);
 
-  useEffect(() => paginate(), [products]);
-  useEffect(() => paginate(), [page]);
+  useEffect(() => paginate(), [products]); // eslint-disable-line
+  useEffect(() => paginate(), [page]); // eslint-disable-line
 
   const handlePageChange = (p: number) => setPage(p);
 
