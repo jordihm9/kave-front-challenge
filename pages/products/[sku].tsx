@@ -29,7 +29,13 @@ const Detail: NextPage = () => {
   }, []);
 
   const search = (products: ProductType[]): void => {
-    setProduct(products.filter(p => p.sku === sku)[0]);
+    const result = products.filter(p => p.sku === sku);
+
+    if (result.length === 1) {
+      setProduct(result[0]);
+    } else {
+      // TODO: product wasn't found
+    }
   }
 
   return (
