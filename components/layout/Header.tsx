@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
         <Link href='/' passHref>
           <LogoContainer>
             <Image src={kavehomeLogo} alt="Kave Home Logo Icon" />
-            <H1 color={COLORS.Primary}>Kave Home</H1>
+            <H1 bold color={COLORS.Primary}>Kave Home</H1>
           </LogoContainer>
         </Link>
         <HeartContainer>

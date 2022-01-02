@@ -52,7 +52,7 @@ const Container = styled.div`
 export const Landing: React.FC = () => {
   return (
     <Container>
-      <H1 color={COLORS.White}>
+      <H1 bold color={COLORS.White}>
         Cuando la realidad supera la ficción.
         <br/>
         Trucos para estar en casa.

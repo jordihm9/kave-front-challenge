@@ -5,7 +5,7 @@ import { CategoriesNav, ButtonCategoriesNav } from 'components/CategoriesNav';
 import { Container } from '@layout/Container';
 import { H1 } from '@headings';
 import { Landing } from 'components/Landing';
-import { ProductsList } from 'components/ProductsList';
+import { List as ProductsList } from 'components/product/List';
 
 import { ProductType } from 'services/fetchProducts';
 
