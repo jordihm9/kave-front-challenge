@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Link from 'next/link';
+
 import { H3 } from '@headings';
 import { Price } from 'components/Price';
 import { ProductThumbnail } from 'components/ProductThumbnail';
@@ -24,7 +26,9 @@ export const Product: React.FC<Props> = ({product}) => {
   return (
     <Container>
       <ProductThumbnail src={product.imageUrl} alt={product.collection}/>
-      <Title bold>{product.collection}</Title>
+      <Link href={`/products/${product.sku}`} passHref>
+        <a><Title bold>{product.collection}</Title></a>
+      </Link>
       <Price size='S' price={parseInt(product.price)} />
     </Container>
   );
