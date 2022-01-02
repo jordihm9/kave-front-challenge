@@ -24,6 +24,7 @@ const InputContainer = styled.div`
 `;
 
 const Input = styled.input`
+  width: 100%;
   margin-left: 1em;
   border: none;
   outline: none;

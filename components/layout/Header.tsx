@@ -29,6 +29,7 @@ const Nav = styled.nav`
 `;
 
 const LogoContainer = styled.a`
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
