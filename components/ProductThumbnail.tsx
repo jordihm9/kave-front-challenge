@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-import Image from 'next/image';
-
 import { COLORS } from '@theme';
 import { mediaQuery } from 'styles/utils';
 
+import { Img } from 'components/Img';
 import { Heart } from '@icons/Heart';
 
 interface Props {
@@ -27,14 +26,6 @@ const Thumbnail = styled.div`
     top: 1rem;
     right: 1rem;
   }
-`;
-
-const Img = styled(Image)`
-  margin: auto;
-  display: block;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
 `;
 
 export const ProductThumbnail: React.FC<Props> = ({src, alt}) => {

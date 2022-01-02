@@ -3,7 +3,7 @@ import styled from 'styled-components';
 type Size = 'S' | 'M' | 'L';
 
 interface Props {
-  price: string | number,
+  price: number,
   size: Size
 }
 
@@ -19,11 +19,31 @@ const setFontSize = (size: Size) => {
 }
 
 const StyledPrice = styled.span<{size: Size}>`
-  display: inline-block;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
   font-size: ${({size}) => setFontSize(size)};
 `;
 
+const CurrencySign = styled.span<{size: Size}>`
+  font-size: ${({size}) => size === 'L' ? '0.70em' : 'inherit'};
+`;
+
 export const Price: React.FC<Props> = ({price, size}) => {
-  return <StyledPrice size={size}>{price}&euro;</StyledPrice>
-}
+  const format = (): string => {
+    const locale = 'ca-ES';
+    const options: Intl.NumberFormatOptions = {
+      style: 'decimal',
+      //minimumFractionDigits: 2
+    };
+
+    return new Intl.NumberFormat(locale, options).format(price);
+  }
+
+  return (
+    <StyledPrice size={size}>
+      <span>{format()}</span>
+      <CurrencySign size={size}>&euro;</CurrencySign>
+    </StyledPrice>
+  )
+};
 
