@@ -19,7 +19,6 @@ const Title = styled(H1)`
   color: #000000;
   text-transform: capitalize;
   font-family: Poppins, 'sans-serif'; 
-  font-weight: 500;
 `;
 
 const Subtitle = styled.p`
@@ -31,7 +30,7 @@ const Description = styled.p`
   max-width: 60ch;
 `;
 
-export const ProductInfo: React.FC<Props> = ({product}) => {
+export const Info: React.FC<Props> = ({product}) => {
   return (
     <InfoContainer>
       <Title>{product.collection}</Title>
