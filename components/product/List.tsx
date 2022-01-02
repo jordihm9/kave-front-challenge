@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Product } from 'components/Product';
+import { Card } from 'components/product/Card';
 
 import { mediaQuery } from 'styles/utils';
 
@@ -20,11 +20,11 @@ const Grid = styled.div`
   ${mediaQuery('XL')`grid-template-columns: repeat(3, 1fr);`}
 `;
 
-export const ProductsList: React.FC<Props> = ({products}) => {
+export const List: React.FC<Props> = ({products}) => {
   return (
     <Grid>
       {products.map(product => (
-        <Product key={product.sku} product={product} />
+        <Card key={product.sku} product={product} />
       ))}
     </Grid>
   )

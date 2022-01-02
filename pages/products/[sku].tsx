@@ -6,7 +6,7 @@ import type { NextPage } from 'next';
 
 import { mediaQuery } from 'styles/utils';
 
-import { ProductDetail } from 'components/ProductDetail';
+import { Detail as ProductDetail } from 'components/product/Detail';
 
 import { fetchProducts, ProductType } from 'services/fetchProducts';
 

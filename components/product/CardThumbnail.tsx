@@ -28,7 +28,7 @@ const Thumbnail = styled.div`
   }
 `;
 
-export const ProductThumbnail: React.FC<Props> = ({src, alt}) => {
+export const CardThumbnail: React.FC<Props> = ({src, alt}) => {
   return (
     <Thumbnail>
       <Heart/>

@@ -5,8 +5,8 @@ import { usePagination } from 'hooks/usePagination';
 
 import { Container } from '@layout/Container';
 import { H1, H3 } from '@headings';
+import { List } from 'components/product/List';
 import { Pagination } from 'components/Pagination';
-import { ProductsList } from 'components/ProductsList';
 
 import { fetchProducts, ProductType } from 'services/fetchProducts';
 
@@ -44,7 +44,7 @@ const Products: NextPage = () => {
       <H3>Lorem ipsum dolor sit amet.</H3>
       { products.length >= 1 ? 
         <>
-          <ProductsList products={paginatedProducts} />
+          <List products={paginatedProducts} />
           { products.length > itemsPerPage ?
             <Pagination
               current={page}

@@ -4,8 +4,8 @@ import { COLORS } from '@theme';
 import { mediaQuery } from 'styles/utils';
 
 import { Img } from 'components/Img';
+import { Info } from 'components/product/Info';
 import { Heart } from '@icons/Heart';
-import { ProductInfo } from 'components/ProductInfo';
 
 import { ProductType } from 'services/fetchProducts';
 
@@ -31,7 +31,7 @@ const ImageContainer = styled.div`
   }
 `;
 
-export const ProductDetail: React.FC<Props> = ({product}) => {
+export const Detail: React.FC<Props> = ({product}) => {
   return (
     <>
       <ImageContainer>
@@ -42,7 +42,7 @@ export const ProductDetail: React.FC<Props> = ({product}) => {
           layout='fill'
         />
       </ImageContainer>
-      <ProductInfo product={product} />
+      <Info product={product} />
     </>
   );
 }
