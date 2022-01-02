@@ -10,7 +10,7 @@ import { Pagination } from 'components/Pagination';
 
 import { fetchProducts, ProductType } from 'services/fetchProducts';
 
-const itemsPerPage = 12;
+const itemsPerPage = 20;
 
 const Products: NextPage = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
